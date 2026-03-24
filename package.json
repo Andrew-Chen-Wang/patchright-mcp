@@ -20,12 +20,15 @@
     "cli.js",
     "config.d.ts",
     "index.d.ts",
-    "index.js"
+    "index.js",
+    "index.mjs"
   ],
   "exports": {
     "./package.json": "./package.json",
     ".": {
       "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.js",
       "default": "./index.js"
     }
   },
@@ -38,7 +41,7 @@
     "prepublishOnly": "npm test"
   },
   "dependencies": {
-    "patchright": "1.58.2",
-    "patchright-core": "1.58.2"
+    "patchright": ">=1.56.0",
+    "patchright-core": ">=1.56.0"
   }
 }
