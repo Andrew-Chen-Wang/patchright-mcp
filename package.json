@@ -1,0 +1,44 @@
+{
+  "name": "@andrew-chen-wang/patchright-mcp",
+  "version": "0.0.1",
+  "description": "Patchright Tools for MCP",
+  "homepage": "https://github.com/Andrew-Chen-Wang/patchright-mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrew-Chen-Wang/patchright-mcp.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "author": {
+    "name": "Andrew Chen-Wang"
+  },
+  "license": "Apache-2.0",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "cli.js",
+    "config.d.ts",
+    "index.d.ts",
+    "index.js"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "bin": {
+    "patchright-mcp": "cli.js"
+  },
+  "scripts": {
+    "build": "echo OK",
+    "test": "node -e \"require('./index.js')\"",
+    "prepublishOnly": "npm test"
+  },
+  "dependencies": {
+    "patchright": "1.58.2",
+    "patchright-core": "1.58.2"
+  }
+}
